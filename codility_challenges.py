@@ -1,4 +1,4 @@
 """"
-Nome: João Victor Fernandes
+Name: João Victor Fernandes
 Email: joao.victorfmaciel@gmail.com
 """
