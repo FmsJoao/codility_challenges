@@ -25,3 +25,9 @@ cyclic = [([1, 2, 3, 4, 5], 4, [2, 3, 4, 5, 1]),
 @pytest.mark.parametrize(['A', 'K', 'expected'], cyclic)
 def test_cyclic_rotation(A, K, expected):
     assert codility_challenges.cyclic_rotation(A, K) == expected
+
+odd = [([1, 2, 3, 4, 4, 3, 2], 1)]
+
+@pytest.mark.parametrize(['A', 'expected'], odd)
+def test_odd_occurrences_in_array(A, expected):
+    assert codility_challenges.odd_occurrences_in_array(A) == expected
