@@ -26,8 +26,19 @@ cyclic = [([1, 2, 3, 4, 5], 4, [2, 3, 4, 5, 1]),
 def test_cyclic_rotation(A, K, expected):
     assert codility_challenges.cyclic_rotation(A, K) == expected
 
-odd = [([1, 2, 3, 4, 4, 3, 2], 1)]
+odd = [([1, 2, 3, 4, 4, 3, 2], 1),
+       ([1, 2, 5, 6, 8, 3, 5, 4, 2, 5, 8, 1, 6, 3], 4),
+       ([1, 1, 1, 1, 1, 1, 0, 1], 0)]
 
 @pytest.mark.parametrize(['A', 'expected'], odd)
 def test_odd_occurrences_in_array(A, expected):
     assert codility_challenges.odd_occurrences_in_array(A) == expected
+
+coin = [([1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0 ,0, 1], 5),
+        ([1, 1, 1, 1, 1, 1, 1], 3),
+        ([0], 0),
+        ([], 0)]
+
+@pytest.mark.parametrize(['A', 'expected'], coin)
+def test_coins(A, expected):
+    assert codility_challenges.coins(A) == expected
